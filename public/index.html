@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <!-- My JS -->
+  <script src="scripts/script.js" type="text/javascript" async defer></script>
+  <!-- Font Awesome JS -->
+  <script src="scripts/fontawesome-all.js" type="text/javascript" async defer></script>
+  <!-- W3 CSS -->
+  <link rel="stylesheet" type="text/css" href="stylesheet/w3.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="stylesheet/bootstrap.min.css">
+  <!-- My CSS -->
+  <link rel="stylesheet" type="text/css" href="stylesheet/style.css">
+  <!-- Title -->
+  <link rel="shortcut icon" href="images/jforceicon.ico">
+  <title>JForce Anket</title>
+</head>
+
+<body class="w3-light-grey">
+  <div class="w3-content w3-margin-top col-md-6 col-lg-6">
+    <div class="w3-threequarter col-md-12 col-lg-12">
+      <div class="w3-container w3-opacity">
+        <p>
+          <center>
+            <img src="images/jforce.png" style="width:60%"></img>
+            <br>
+            <small>IBM SPSS Modeler Temel Eğitimi Anketi</small>
+          </center>
+        </p>
+        <p>     
+          <center>       
+          <h7><i class="fas fa-calendar-alt" style="font-size: 15px;color:#1344a0"></i> 18-19-20 Nisan 2018 </h7>
+           </center>
+        </p>
+        <hr>
+        <div class="w3-container w3-light-grey w3-card-4">
+          <p>
+            <b>
+              <center class="w3-large" style="color:#1344a0">
+                <i class="fas fa-info-circle" style="font-size: 20px;color:#1344a0"></i> Eğitimin Kazanımları </center>
+            </b>
+          </p>
+          <p>* Eğitime katılımınız ile SPSS Modeler temel yapısını ve projelerinizde uygulayabileceğiniz pratikler hakkında
+            bilgi edinme fırsatı bulacaksınız. Örnek sorular üzerinden yapılan çalışmalar ürünü deneyimlemeniz için faydalı
+            olacaktır. Veri manipülasyonu ve modelleme çalışmalarına altyapı oluşturacak ve ürün ile yapacağınız çalışmalarda
+            öğrenmenizi hızlandıracaktır.</p>
+          <br>
+          <p>* Bu kazanımları göz önünde bulundurarak aşağıdaki soruları puanlamanızı rica ederiz.</p>
+        </div>
+        <br>
+      </div>
+    </div>
+    <div class="w3-container w3-card-4 w3-white ">
+      <hr>
+      <h2 class="w3-opacity">
+        <b>
+          <center style="color:#1344a0">
+            <i class="far fa-clipboard" style="font-size: 30px;color:#1344a0"></i> Değerlendirme Bölümü</center>
+        </b>
+      </h2>
+      <hr>
+      <!---------------------FORM -------------------->
+      <form onsubmit="return checkRadios(0)" method="post" action="/success">
+        <div class="w3-container form-group">
+          <div name="isim" align="center">
+            <p class="w3-large w3-opacity">
+              <b>İsim Soyisim </b>
+              <i class="fas fa-user" style="font-size: 20px;color:#1344a0"></i>
+            </p>
+            <!------Anket Bilgi------>
+            <input type="text" name="anketisim"  value="IBM SPSS Modeler Temel Eğitimi Anketi" hidden >
+            <input type="text" name="tarih"  value="18-19-20 Nisan 2018" hidden>         
+            <!------İsim Soyisim------>
+            <input class=" w3-card-2" type="text" id="isim" name="isim" placeholder="Lütfen isminizi girin" style="width: 60%;text-transform: capitalize;height:3em;"
+              required>
+            <p> </p>            
+          </div>
+        </div>
+        <div>
+          <p>
+            <b> *</b> Her bölüm içerisinde yer alan değerlendirmeleri aşağıdaki kriterlere göre puanlamanızı rica ederiz.</p>
+          <p align="right">
+            <b>| 1=</b>Çok Yetersiz
+            <b>| 2=</b>Yetersiz
+            <b>| 3=</b>Normal
+            <b>| 4=</b>İyi
+            <b>| 5=</b>Çok İyi</p>
+          <hr>
+          <h4 class="w3-opacity" style="color:#1344a0">
+            <b>
+              <center>
+                <i class="fas fa-user" style="font-size: 20px;color:#1344a0"></i> Eğitmen</center>
+            </b>
+          </h4>
+          <hr>
+          <!-- Soru1 -->
+          <h5 style="text-decoration: underline">
+            <center>
+              <b style="color:#0059b3">1. </b>Eğitmenin konu hakkındaki bilgisi ve hakimiyeti</center>
+          </h5>
+          <div class="w3-container mYradio row">
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru1" id="radio11" value="1">
+              <label for="radio11">1</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru1" id="radio12" value="2">
+              <label for="radio12">2</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru1" id="radio13" value="3">
+              <label for="radio13">3</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru1" id="radio14" value="4">
+              <label for="radio14">4</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru1" id="radio15" value="5">
+              <label for="radio15">5</label>
+            </div>
+          </div>
+          <p></p>
+          <!-- Soru 2-->
+          <h5 style="text-decoration: underline">
+            <center>
+              <b style="color:#0059b3">2. </b>Eğitmenin derse ilgi ve dikkati canlı tutabilme yeteneği</center>
+          </h5>
+          <div class="w3-container mYradio row">
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input " type="radio" name="soru2" id="radio21" value="1">
+              <label for="radio21">1</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru2" id="radio22" value="2">
+              <label for="radio22">2</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru2" id="radio23" value="3">
+              <label class="form-check-label" for="radio23">3</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru2" id="radio24" value="4">
+              <label class="form-check-label" for="radio24">4</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru2" id="radio25" value="5">
+              <label for="radio25">5</label>
+            </div>
+          </div>
+          <p></p>
+          <!-- Soru 3-->
+          <h5 style="text-decoration: underline">
+            <center>
+              <b style="color:#0059b3">3. </b>Eğitmenin konuları açık ve anlaşılır bir şekilde anlatabilme yeteneği</center>
+          </h5>
+          <div class="w3-container mYradio row">
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input " type="radio" name="soru3" id="radio31" value="1">
+              <label for="radio31">1</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru3" id="radio32" value="2">
+              <label for="radio32">2</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru3" id="radio33" value="3">
+              <label for="radio33">3</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru3" id="radio34" value="4">
+              <label for="radio34">4</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru3" id="radio35" value="5">
+              <label for="radio35">5</label>
+            </div>
+          </div>
+          <p></p>
+          <!-- Soru 4-->
+          <h5 style="text-decoration: underline">
+            <center>
+              <b style="color:#0059b3">4. </b>Eğitmenin soruları cevaplayabilme kabiliyeti</center>
+          </h5>
+          <div class="w3-container mYradio row ">
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input " type="radio" name="soru4" id="radio41" value="1">
+              <label for="radio41">1</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru4" id="radio42" value="2">
+              <label for="radio42">2</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru4" id="radio43" value="3">
+              <label for="radio43">3</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru4" id="radio44" value="4">
+              <label for="radio44">4</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru4" id="radio45" value="5">
+              <label for="radio45">5</label>
+            </div>
+          </div>
+          <p></p>
+          <hr>
+          <!-- Eğitim İçeriği -->
+          <h4 class="w3-opacity" style="color:#1344a0">
+            <b>
+              <center>
+                <i class="fab fa-leanpub" style="font-size: 20px;color:#1344a0"></i> Eğitim İçeriği</center>
+            </b>
+          </h4>
+          <hr>
+          <!-- Soru5 -->
+          <h5 style="text-decoration: underline">
+            <center>
+              <b style="color:#0059b3">5. </b>Eğitimde yapılan örnekler ve uygulamalar yeterli mi?</center>
+          </h5>
+          <div class="w3-container mYradio row">
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input " type="radio" name="soru5" id="radio51" value="1">
+              <label for="radio51">1</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru5" id="radio52" value="2">
+              <label for="radio52">2</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru5" id="radio53" value="3">
+              <label for="radio53">3</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru5" id="radio54" value="4">
+              <label for="radio54">4</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru5" id="radio55" value="5">
+              <label for="radio55">5</label>
+            </div>
+          </div>
+          <p></p>
+          <!-- Soru 6-->
+          <h5 style="text-decoration: underline">
+            <center>
+              <b style="color:#0059b3">6. </b>Eğitim süresi yeterli mi?</center>
+          </h5>
+          <div class="w3-container mYradio row">
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input " type="radio" name="soru6" id="radio61" value="1">
+              <label for="radio61">1</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru6" id="radio62" value="2">
+              <label for="radio62">2</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru6" id="radio63" value="3">
+              <label for="radio63">3</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru6" id="radio64" value="4">
+              <label for="radio64">4</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru6" id="radio65" value="5">
+              <label for="radio65">5</label>
+            </div>
+          </div>
+          <p></p>
+          <!-- Soru 7-->
+          <h5 style="text-decoration: underline">
+            <center>
+              <b style="color:#0059b3">7. </b>Eğitim materyalleri yeterli mi?</center>
+          </h5>
+          <div class="w3-container mYradio row">
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input " type="radio" name="soru7" id="radio71" value="1">
+              <label for="radio71">1</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru7" id="radio72" value="2">
+              <label for="radio72">2</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru7" id="radio73" value="3">
+              <label for="radio73">3</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru7" id="radio74" value="4">
+              <label for="radio74">4</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru7" id="radio75" value="5">
+              <label for="radio75">5</label>
+            </div>
+          </div>
+          <p></p>
+          <!-- Soru 8-->
+          <h5 style="text-decoration: underline">
+            <center>
+              <b style="color:#0059b3">8. </b>Katıldığınız eğitimin işiniz için yararlı olduğunu düşünüyor musunuz?</center>
+          </h5>
+          <div class="w3-container mYradio row ">
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input " type="radio" name="soru8" id="radio81" value="1">
+              <label for="radio81">1</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru8" id="radio82" value="2">
+              <label for="radio82">2</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru8" id="radio83" value="3">
+              <label for="radio83">3</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru8" id="radio84" value="4">
+              <label for="radio84">4</label>
+            </div>
+            <div class="form-check col-md-2 w3-margin-left mYradio-success">
+              <input class="form-check-input" type="radio" name="soru8" id="radio85" value="5">
+              <label for="radio85">5</label>
+            </div>
+          </div>
+          <p></p>
+          <!------Soru-9------>
+          <h5 style="text-decoration: underline">
+           <center>
+                <b style="color:#0059b3">9. </b>Bu eğitimden kazandıklarınızı, iş hayatınızın hangi alanlarında kullanmayı düşünüyorsunuz?
+          </center>
+        </h5>
+        <p></p>
+        <textarea class="form-control w3-card-2" name="ek1" id="ek1" rows="5" required ></textarea>
+        <hr>
+          <!-------- Ekleme İstek -------->
+          <h3 class="w3-text-theme">
+            <b>
+              <center class="w3-opacity" style="color:#1344a0">Eklemek İstedikleriniz
+                <i class="far fa-comment" style="font-size: 30px;color:#1344a0"></i>
+              </center>
+            </b>
+          </h3>
+          <small>
+            <center>(Eğitim ile ilgili her konudaki görüş, öneri ve şikayetlerinizi yazınız.)</center>
+          </small>
+          <hr>
+          <textarea class="form-control w3-card-2" name="ek2" rows="10"></textarea>
+          <hr>
+          <!---------------------Button -------------------->
+          <button type="submit" id="but1" class="btn btn-primary btn-block w3-card-4 "><b>Gönder</b>
+          </button>
+          <hr>
+      </form>
+      <footer class="w3-light-grey w3-container w3-card-2">
+        <p>
+          <center>
+            <b style="color:#0059b3">JFORCE BİLİŞİM TEKNOLOJİLERİ A.Ş.</center>
+          </b>
+        </p>
+        <p>
+          <i class="far fa-map" style="font-size: 15px;color:#1344a0"></i> FSM Mah. Poligon Cad. No: 8A, Buyaka 2 Sitesi, Kule-1, Kat: 7</p>
+        <p align="right">Ümraniye / İSTANBUL </p>
+        <p class="w3-third">
+          <b>
+            <i class="fas fa-phone" style="font-size: 15px;color:#1344a0"></i> Tel: </b>
+          <a href="tel:+90-216-668-0290">0 (216) 668 0290</a>
+        </p>
+        <p class="w3-third">
+          <b>
+            <i class="fas fa-globe" style="font-size: 15px;color:#1344a0"></i> Web: </b>
+          <a href="http://www.jforce.com.tr">www.jforce.com.tr </a>
+        </p>
+        <p class="w3-third">
+          <b>
+            <i class="fas fa-fax" style="font-size: 15px;color:#1344a0"></i> Faks:</b> 0 (216) 668 0295</p>
+      </footer>
+      </div>
+</body>
+
+</html>
