@@ -17,12 +17,6 @@ var cloudant = Cloudant({url: cloudant_url});
 //DB//
 var db;
 db = cloudant.db.use("anketsonuc");
-
-//DB2//
-var db2;
-db2 = cloudant.db.use("sorular");
-var soruArr = [];
-
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));
 
@@ -52,20 +46,6 @@ var nameSchema = new mongoose.Schema({
 
 //create User
 var User = mongoose.model("User", nameSchema);
-
-//get questions
-db2.view('sorusira', 'sorusira', {
-	'sorular': 'soru',
-	'include_docs': true
-  }, function(err, body) {
-	if (!err) {
-	  body.rows.forEach(function(doc) {
-		soruArr.push(doc.doc.soru);
-	  });
-	  console.log(soruArr);
-	}
-  });
-
 //Get&Post the results to the database
 app.post("/success", function (req, res){
     var myData = new User(req.body);
@@ -76,7 +56,7 @@ app.post("/success", function (req, res){
 // start server on the specified port and binding host
 app.listen(appEnv.port, '0.0.0.0', function() {
   // print a message when the server starts listening
-  var soru1text = Document.getElementById("soru1text");
+  var soru1text = document.getElementById("soru1text");
   soru1text = soruArr[0];
   console.log("server starting on " + appEnv.url);
 });
