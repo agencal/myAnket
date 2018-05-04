@@ -15,6 +15,35 @@ today = yyyy + '-' + mm + '-' + dd;
 var dateControl = document.querySelector('input[type="date"]');//tarih input çek
 dateControl.value = today;
 */
+var Cloudant = require('cloudant');
+
+var myurl = 'https://da69f23e-a0a7-47f6-87d7-cd75809455a6-bluemix:c16d68bed237d15f6147dc4b458f168ee7373d9676d77930163d6c5e070d142b@da69f23e-a0a7-47f6-87d7-cd75809455a6-bluemix.cloudant.com:443';
+var cloudant = Cloudant({url: myurl});
+var db = cloudant.db.use('sorular');
+var soruArr = [];
+
+db.view('sorusira', 'sorusira', {
+  'sorular': 'soru',
+  'include_docs': true
+}, function(err, body) {
+  if (!err) {
+    body.rows.forEach(function(doc) {
+      soruArr.push(doc.doc.soru);
+    });
+    console.log(soruArr);
+  }
+});
+
+var soru1text = document.getElementById("soru1text");
+soru1text = soruArr[0];
+
+
+
+
+
+
+
+
 // RadioButtonları kontrol et
 function checkRadios(x)
 {
@@ -61,3 +90,4 @@ for (var a = 0; a <= 4; a++)
 }
 return false;
 }
+
