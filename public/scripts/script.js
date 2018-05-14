@@ -29,7 +29,6 @@ var soruTemp =
   document.getElementsByName(temp);//radiobutton çek
 var radios =
   document.getElementsByClassName('form-check-input'); //Bütün Radiobuttonlar
-  var sonSoru = document.getElementById("ek1");
 
 //Toplam Seçili Cevap Sayısını Bul
 for (var i = 0; i < radios.length-1; i++) {
