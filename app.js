@@ -5,7 +5,7 @@ var cfenv = require('cfenv');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require("mongoose");
-var nodemailer = require('nodemailer');
+//var nodemailer = require('nodemailer');
 
 //add bodyParser
 app.use(bodyParser.json());
@@ -18,12 +18,13 @@ var cloudant = Cloudant({url: cloudant_url});
 //DB//
 var db;
 db = cloudant.db.use("kibris");
+
+
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));
 
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
-
 
 //create schema
 var nameSchema = new mongoose.Schema({
@@ -56,6 +57,7 @@ var User = mongoose.model("User", nameSchema);
 app.post("/success", function (req, res){
 	var myData = new User(req.body);
 	db.insert(myData);
+	res.send('Formu Doldurduğunuz İçin Teşekkür Ederiz.');
 
 	/*var transporter = nodemailer.createTransport({
 		service: 'hotmail',

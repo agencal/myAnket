@@ -10,7 +10,6 @@
 		"cfenv": "1.0.x",
 		"cloudant": "^1.10.0",
 		"express": "4.15.x",
-		"mongodb": "3.0.x",
 		"mongoose": "5.0.x",
 		"nodemailer": "4.6.x"
 	},
